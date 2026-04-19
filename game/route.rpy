@@ -61,3 +61,57 @@ label spend_time_with_nia:
 
     return
 
+if ava_commitment and ava_trust > 10:
+    jump ava_good_ending
+
+elif money < 200:
+    jump bad_financial_ending
+
+elif len(active_relationships) == 0:
+    jump lonely_ending
+else:
+    jump neutral_ending
+
+if kai_commitment and kai_trust > 10:
+    jump kai_good_ending
+
+elif money < 200:
+    jump bad_financial_ending
+
+elif len(active_relationships) == 0:
+    jump lonely_ending
+else:
+    jump neutral_ending
+
+if mira_commitment and mira_trust > 10:
+    jump mira_good_ending
+
+elif money < 200:
+    jump bad_financial_ending
+
+elif len(active_relationships) == 0:
+    jump lonely_ending
+else:
+    jump neutral_ending 
+
+if lila_commitment and lila_trust > 10:
+    jump lila_good_ending
+
+elif money < 200:
+    jump bad_financial_ending
+
+elif len(active_relationships) == 0:
+    jump lonely_ending
+else:
+    jump neutral_ending
+
+if nia_commitment and nia_trust > 10:
+    jump nia_good_ending
+
+elif money < 200:
+    jump bad_financial_ending
+
+elif len(active_relationships) == 0:
+    jump lonely_ending
+else:
+    jump neutral_ending
