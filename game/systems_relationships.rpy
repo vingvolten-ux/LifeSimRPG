@@ -51,3 +51,20 @@ init python:
         if nia_trust >= 3 and nia_affection >= 5:
     $ nia_commitment = True
 
+init python:
+    def trigger_jealousy(excluded_girl):
+        girls = ["ava", "kai", "mira", "lila", "nia"]
+
+        for g in girls:
+            if g != excluded_girl:
+                setattr(store, f"{g}_awareness",
+                    getattr(store, f"{g}_awareness") + 1)
+                if getattr(store, f"{g}_awareness") >= 3:
+                    setattr(store, f"{g}_affection",
+                        getattr(store, f"{g}_affection") - 1)
+                    $ trigger_jealousy("ava")
+                    $ trigger_jealousy("kai")
+                    $ trigger_jealousy("mira")
+                    $ trigger_jealousy("lila")
+                    $ trigger_jealousy("nia")
+
