@@ -9,3 +9,8 @@ default kindness = 0
 
 default academics = 0
 default creativity = 0
+
+init python:
+    def change_stat(stat, value):
+        setattr(store, stat, getattr(store, stat) + value)
+$ money += 100
